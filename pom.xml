@@ -9,7 +9,7 @@
     <name>customersws Spring-WS Application</name>
     <url>http://www.springframework.org/spring-ws</url>
     <build>
-        <finalName>customersws</finalName>
+        <finalName>CustomersWS</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -24,7 +24,7 @@
                 <version>1.1</version>
             </plugin>
             
-            <!-- 
+              
             <plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jaxb2-maven-plugin</artifactId>
@@ -42,9 +42,10 @@
 						<source>${project.basedir}/src/main/resources/services.xsd</source>
 					</sources>
 					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+					<clearOutputDir>false</clearOutputDir>
 				</configuration>
 			</plugin>
-			-->
+			
         </plugins>
     </build>
     <dependencies>
@@ -58,6 +59,13 @@
 		    <groupId>wsdl4j</groupId>
 		    <artifactId>wsdl4j</artifactId>
 		    <version>1.6.3</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>4.0.1</version>
+		    <scope>provided</scope>
 		</dependency>
     </dependencies>
 </project>
