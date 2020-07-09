@@ -8,7 +8,7 @@ public class MessageDispatcherConfig extends AbstractAnnotationConfigMessageDisp
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return null;
+		return new Class[] {RootConfig.class};
 	}
 
 	@Override
