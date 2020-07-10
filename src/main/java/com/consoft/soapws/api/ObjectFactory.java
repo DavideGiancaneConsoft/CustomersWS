@@ -2,7 +2,7 @@
 // Questo file è stato generato dall'architettura JavaTM per XML Binding (JAXB) Reference Implementation, v2.3.2 
 // Vedere <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Qualsiasi modifica a questo file andrà persa durante la ricompilazione dello schema di origine. 
-// Generato il: 2020.07.09 alle 03:13:31 PM CEST 
+// Generato il: 2020.07.10 alle 11:36:11 AM CEST 
 //
 
 
@@ -37,19 +37,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CustomersRequest }
+     * Create an instance of {@link GetCustomersRequest }
      * 
      */
-    public CustomersRequest createCustomersRequest() {
-        return new CustomersRequest();
+    public GetCustomersRequest createGetCustomersRequest() {
+        return new GetCustomersRequest();
     }
 
     /**
-     * Create an instance of {@link CustomersResponse }
+     * Create an instance of {@link GetCustomersResponse }
      * 
      */
-    public CustomersResponse createCustomersResponse() {
-        return new CustomersResponse();
+    public GetCustomersResponse createGetCustomersResponse() {
+        return new GetCustomersResponse();
     }
 
     /**
@@ -93,19 +93,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RegionsRequest }
+     * Create an instance of {@link GetRegionsRequest }
      * 
      */
-    public RegionsRequest createRegionsRequest() {
-        return new RegionsRequest();
+    public GetRegionsRequest createGetRegionsRequest() {
+        return new GetRegionsRequest();
     }
 
     /**
-     * Create an instance of {@link RegionsResponse }
+     * Create an instance of {@link GetRegionsResponse }
      * 
      */
-    public RegionsResponse createRegionsResponse() {
-        return new RegionsResponse();
+    public GetRegionsResponse createGetRegionsResponse() {
+        return new GetRegionsResponse();
     }
 
     /**
@@ -117,19 +117,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CitiesByRegionRequest }
+     * Create an instance of {@link GetCitiesByRegionRequest }
      * 
      */
-    public CitiesByRegionRequest createCitiesByRegionRequest() {
-        return new CitiesByRegionRequest();
+    public GetCitiesByRegionRequest createGetCitiesByRegionRequest() {
+        return new GetCitiesByRegionRequest();
     }
 
     /**
-     * Create an instance of {@link CitiesByRegionResponse }
+     * Create an instance of {@link GetCitiesByRegionResponse }
      * 
      */
-    public CitiesByRegionResponse createCitiesByRegionResponse() {
-        return new CitiesByRegionResponse();
+    public GetCitiesByRegionResponse createGetCitiesByRegionResponse() {
+        return new GetCitiesByRegionResponse();
     }
 
     /**

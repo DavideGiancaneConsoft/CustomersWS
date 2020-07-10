@@ -9,10 +9,10 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import com.consoft.soapws.api.Customer;
-import com.consoft.soapws.api.CustomersRequest;
-import com.consoft.soapws.api.CustomersResponse;
 import com.consoft.soapws.api.DeleteCustomerRequest;
 import com.consoft.soapws.api.DeleteCustomerResponse;
+import com.consoft.soapws.api.GetCustomersRequest;
+import com.consoft.soapws.api.GetCustomersResponse;
 import com.consoft.soapws.api.NewCustomerRequest;
 import com.consoft.soapws.api.NewCustomerResponse;
 import com.consoft.soapws.service.CustomerServices;
@@ -23,16 +23,16 @@ public class CustomerEndpoint extends AbstractEndpoint{
 	@Autowired
 	private CustomerServices customerServices;
 	
-	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "CustomersRequest")
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCustomersRequest")
 	@ResponsePayload
-	public CustomersResponse getCustomers(@RequestPayload CustomersRequest request){
-		CustomersResponse response = objectFactory.createCustomersResponse();
+	public GetCustomersResponse getCustomers(@RequestPayload GetCustomersRequest request){
+		GetCustomersResponse response = objectFactory.createGetCustomersResponse();
 		List<Customer> customers = customerServices.getCustomers();
 		response.getCustomers().addAll(customers);
 		return response;
 	}
 	
-	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "NewCustomerRequest")
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "newCustomerRequest")
 	@ResponsePayload
 	public NewCustomerResponse newCustomer(@RequestPayload NewCustomerRequest request) {
 		Customer c = request.getNewCustomer();
@@ -42,7 +42,7 @@ public class CustomerEndpoint extends AbstractEndpoint{
 		return response;
 	}
 	
-	@PayloadRoot(namespace = NAMESPACE_URI, localPart="DeleteCustomerRequest")
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart="deleteCustomerRequest")
 	@ResponsePayload
 	public DeleteCustomerResponse deleteCustomer(@RequestPayload DeleteCustomerRequest request) {
 		int customerID = request.getCustomerToDeleteID();

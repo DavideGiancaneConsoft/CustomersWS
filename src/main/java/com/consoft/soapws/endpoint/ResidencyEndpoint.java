@@ -8,12 +8,12 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
-import com.consoft.soapws.api.CitiesByRegionRequest;
-import com.consoft.soapws.api.CitiesByRegionResponse;
 import com.consoft.soapws.api.City;
+import com.consoft.soapws.api.GetCitiesByRegionRequest;
+import com.consoft.soapws.api.GetCitiesByRegionResponse;
+import com.consoft.soapws.api.GetRegionsRequest;
+import com.consoft.soapws.api.GetRegionsResponse;
 import com.consoft.soapws.api.Region;
-import com.consoft.soapws.api.RegionsRequest;
-import com.consoft.soapws.api.RegionsResponse;
 import com.consoft.soapws.service.ResidencyServices;
 
 @Endpoint
@@ -22,11 +22,11 @@ public class ResidencyEndpoint extends AbstractEndpoint {
 	@Autowired
 	private ResidencyServices residencyServices;
 	
-	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "RegionsRequest")
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getRegionsRequest")
 	@ResponsePayload
-	public RegionsResponse getRegions(@RequestPayload RegionsRequest request) {
+	public GetRegionsResponse getRegions(@RequestPayload GetRegionsRequest request) {
 		//Creo la risposta (vuota)
-		RegionsResponse response = objectFactory.createRegionsResponse();
+		GetRegionsResponse response = objectFactory.createGetRegionsResponse();
 		
 		//USo il service per prelevare le regioni
 		List<Region> regions = residencyServices.getAllRegions();
@@ -36,10 +36,10 @@ public class ResidencyEndpoint extends AbstractEndpoint {
 		return response;
 	}
 	
-	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "CitiesByRegionRequest")
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCitiesByRegionRequest")
 	@ResponsePayload
-	public CitiesByRegionResponse getCitiesByRegion(@RequestPayload CitiesByRegionRequest request) {
-		CitiesByRegionResponse response = objectFactory.createCitiesByRegionResponse();
+	public GetCitiesByRegionResponse getCitiesByRegion(@RequestPayload GetCitiesByRegionRequest request) {
+		GetCitiesByRegionResponse response = objectFactory.createGetCitiesByRegionResponse();
 		List<City> cities = residencyServices.getCitiesByRegionId(request.getRegionIdentifier());
 		response.getCities().addAll(cities);
 		return response;

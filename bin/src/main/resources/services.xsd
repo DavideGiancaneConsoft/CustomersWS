@@ -6,13 +6,13 @@
 		
 		<!-- ******************* DICHIARAZIONE SERVIZI PUBBLICATI DAL WS *******************  -->
 		<!-- Servizio richiedere tutti i customer registrati (richiesta + risposta)-->
-		<xs:element name="getCustomersRequest">
+		<xs:element name="CustomersRequest">
 			<xs:complexType>
 				<xs:sequence></xs:sequence>
 			</xs:complexType>
 		</xs:element>
 		
-		<xs:element name="getCustomersResponse">
+		<xs:element name="CustomersResponse">
 			<xs:complexType>
 				<xs:sequence>
 					<!-- qui dico che ritorno una lista (potenzialmente vuota) di customers -->
@@ -23,7 +23,7 @@
 		</xs:element>
 		
 		<!-- Servizio per inserire un nuovo customer -->
-		<xs:element name="newCustomerRequest">
+		<xs:element name="NewCustomerRequest">
 			<xs:complexType>
 				<xs:sequence>
 					<xs:element name="newCustomer" type="tns:customer"></xs:element>
@@ -33,7 +33,7 @@
 		
 		<!-- Come response ritorno una stringa di conferma
 			TODO: vedere come si può fare usando l'header dell'envelope -->
-		<xs:element name="newCustomerResponse"> 
+		<xs:element name="NewCustomerResponse"> 
 			<xs:complexType>
 				<xs:sequence>
 					<xs:element name="registrationResult" type="xs:string"></xs:element>
@@ -42,7 +42,7 @@
 		</xs:element>
 		
 		<!-- Servizio per cancellare un customer -->
-		<xs:element name="deleteCustomerRequest">
+		<xs:element name="DeleteCustomerRequest">
 			<xs:complexType>
 				<xs:sequence>
 					<xs:element name="customerToDeleteID" type="xs:int"></xs:element>
@@ -52,7 +52,7 @@
 		
 		<!-- Come response ritorno una stringa di conferma
 			TODO: vedere come si può fare usando l'header dell'envelope -->
-		<xs:element name="deleteCustomerResponse">
+		<xs:element name="DeleteCustomerResponse">
 			<xs:complexType>
 				<xs:sequence>
 					<xs:element name="deletionResult" type="xs:string"></xs:element>
@@ -61,12 +61,12 @@
 		</xs:element>
 		
 		<!-- Servizio per richiedere tutte le regioni (richiesta + risposta)-->
-		<xs:element name="getRegionsRequest">
+		<xs:element name="RegionsRequest">
 			<xs:complexType>
 				<xs:sequence></xs:sequence>
 			</xs:complexType>
 		</xs:element>
-		<xs:element name="getRegionsResponse">
+		<xs:element name="RegionsResponse">
 			<xs:complexType>
 				<xs:sequence>
 					<xs:element name="regions" type="tns:region" maxOccurs="unbounded"></xs:element>
@@ -75,14 +75,14 @@
 		</xs:element>
 		
 		<!-- Servizio per richiedere tutte le città afferenti ad una specifica regione -->
-		<xs:element name="getCitiesByRegionRequest">
+		<xs:element name="CitiesByRegionRequest">
 			<xs:complexType>
 				<xs:sequence>
 					<xs:element name="regionIdentifier" type="xs:int"></xs:element>
 				</xs:sequence>
 			</xs:complexType>
 		</xs:element>
-		<xs:element name="getCitiesByRegionResponse">
+		<xs:element name="CitiesByRegionResponse">
 			<xs:complexType>
 				<xs:sequence>
 					<xs:element name="cities" type="tns:city" maxOccurs="unbounded"></xs:element>

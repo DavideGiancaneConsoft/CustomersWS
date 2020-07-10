@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope 
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:us="http://www.consoft.com/soapws/api">
+	
+	<soapenv:Header/>
+	<soapenv:Body>
+		<us:CustomersRequest>
+		</us:CustomersRequest>
+	</soapenv:Body>
+</soapenv:Envelope>

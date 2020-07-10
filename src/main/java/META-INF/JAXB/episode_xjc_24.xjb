@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Questo file è stato generato dall'architettura JavaTM per XML Binding (JAXB) Reference Implementation, v2.3.2 
+Vedere <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Qualsiasi modifica a questo file andrà persa durante la ricompilazione dello schema di origine. 
+Generato il: 2020.07.10 alle 11:24:41 AM CEST 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.consoft.com/soapws/api">
+    <schemaBindings map="false">
+      <package name="com.consoft.soapws.api"/>
+    </schemaBindings>
+    <bindings scd="tns:getCustomersRequest">
+      <class ref="com.consoft.soapws.api.GetCustomersRequest"/>
+    </bindings>
+    <bindings scd="tns:getCustomersResponse">
+      <class ref="com.consoft.soapws.api.GetCustomersResponse"/>
+    </bindings>
+    <bindings scd="~tns:customer">
+      <class ref="com.consoft.soapws.api.Customer"/>
+    </bindings>
+    <bindings scd="tns:newCustomerRequest">
+      <class ref="com.consoft.soapws.api.NewCustomerRequest"/>
+    </bindings>
+    <bindings scd="tns:newCustomerResponse">
+      <class ref="com.consoft.soapws.api.NewCustomerResponse"/>
+    </bindings>
+    <bindings scd="tns:deleteCustomerRequest">
+      <class ref="com.consoft.soapws.api.DeleteCustomerRequest"/>
+    </bindings>
+    <bindings scd="tns:deleteCustomerResponse">
+      <class ref="com.consoft.soapws.api.DeleteCustomerResponse"/>
+    </bindings>
+    <bindings scd="tns:getRegionsRequest">
+      <class ref="com.consoft.soapws.api.GetRegionsRequest"/>
+    </bindings>
+    <bindings scd="tns:getRegionsResponse">
+      <class ref="com.consoft.soapws.api.GetRegionsResponse"/>
+    </bindings>
+    <bindings scd="~tns:region">
+      <class ref="com.consoft.soapws.api.Region"/>
+    </bindings>
+    <bindings scd="tns:getCitiesByRegionRequest">
+      <class ref="com.consoft.soapws.api.GetCitiesByRegionRequest"/>
+    </bindings>
+    <bindings scd="tns:getCitiesByRegionResponse">
+      <class ref="com.consoft.soapws.api.GetCitiesByRegionResponse"/>
+    </bindings>
+    <bindings scd="~tns:city">
+      <class ref="com.consoft.soapws.api.City"/>
+    </bindings>
+  </bindings>
+</bindings>
+

@@ -2,7 +2,7 @@
 // Questo file è stato generato dall'architettura JavaTM per XML Binding (JAXB) Reference Implementation, v2.3.2 
 // Vedere <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Qualsiasi modifica a questo file andrà persa durante la ricompilazione dello schema di origine. 
-// Generato il: 2020.07.09 alle 03:13:31 PM CEST 
+// Generato il: 2020.07.10 alle 11:36:11 AM CEST 
 //
 
 
@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="cities" type="{http://www.consoft.com/soapws/api}city" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="regions" type="{http://www.consoft.com/soapws/api}region" maxOccurs="unbounded"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -38,41 +38,41 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "cities"
+    "regions"
 })
-@XmlRootElement(name = "CitiesByRegionResponse")
-public class CitiesByRegionResponse {
+@XmlRootElement(name = "getRegionsResponse")
+public class GetRegionsResponse {
 
     @XmlElement(required = true)
-    protected List<City> cities;
+    protected List<Region> regions;
 
     /**
-     * Gets the value of the cities property.
+     * Gets the value of the regions property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the cities property.
+     * This is why there is not a <CODE>set</CODE> method for the regions property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getCities().add(newItem);
+     *    getRegions().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link City }
+     * {@link Region }
      * 
      * 
      */
-    public List<City> getCities() {
-        if (cities == null) {
-            cities = new ArrayList<City>();
+    public List<Region> getRegions() {
+        if (regions == null) {
+            regions = new ArrayList<Region>();
         }
-        return this.cities;
+        return this.regions;
     }
 
 }

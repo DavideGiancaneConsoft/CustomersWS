@@ -2,7 +2,7 @@
 // Questo file è stato generato dall'architettura JavaTM per XML Binding (JAXB) Reference Implementation, v2.3.2 
 // Vedere <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Qualsiasi modifica a questo file andrà persa durante la ricompilazione dello schema di origine. 
-// Generato il: 2020.07.09 alle 03:13:31 PM CEST 
+// Generato il: 2020.07.10 alle 11:36:11 AM CEST 
 //
 
 
@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -27,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="regions" type="{http://www.consoft.com/soapws/api}region" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="customers" type="{http://www.consoft.com/soapws/api}customer" maxOccurs="unbounded" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -38,41 +37,40 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "regions"
+    "customers"
 })
-@XmlRootElement(name = "RegionsResponse")
-public class RegionsResponse {
+@XmlRootElement(name = "getCustomersResponse")
+public class GetCustomersResponse {
 
-    @XmlElement(required = true)
-    protected List<Region> regions;
+    protected List<Customer> customers;
 
     /**
-     * Gets the value of the regions property.
+     * Gets the value of the customers property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the regions property.
+     * This is why there is not a <CODE>set</CODE> method for the customers property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getRegions().add(newItem);
+     *    getCustomers().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Region }
+     * {@link Customer }
      * 
      * 
      */
-    public List<Region> getRegions() {
-        if (regions == null) {
-            regions = new ArrayList<Region>();
+    public List<Customer> getCustomers() {
+        if (customers == null) {
+            customers = new ArrayList<Customer>();
         }
-        return this.regions;
+        return this.customers;
     }
 
 }
