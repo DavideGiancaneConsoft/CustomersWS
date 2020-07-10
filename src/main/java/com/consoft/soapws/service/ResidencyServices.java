@@ -36,6 +36,7 @@ public class ResidencyServices {
 	}
 	
 	private void initializeRegions() {
+		regions.clear();
 		Region r1 = new Region();
 		r1.setRegionID(1);
 		r1.setRegionName("Lombardia");
@@ -52,6 +53,7 @@ public class ResidencyServices {
 	}
 	
 	private void initializeCities() {
+		cities.clear();
 		City c1 = new City();
 		c1.setInitials("MI");
 		c1.setName("Milano");
@@ -82,6 +84,6 @@ public class ResidencyServices {
 		c5.setName("Torino");
 		c5.setRegion(2);
 		
-		cities.addAll(Arrays.asList(new City[] {c1,c2,c3,c4,c5,c6}));	
+		cities.addAll(Arrays.asList(new City[] {c1,c2,c3,c4,c5,c6}));
 	}
 }

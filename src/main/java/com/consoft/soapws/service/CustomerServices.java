@@ -60,6 +60,6 @@ public class CustomerServices {
 		
 		public String deleteCustomer(int id) {
 			customers.remove(id);
-			return FAILURE;
+			return SUCCESS;
 		}
 }
