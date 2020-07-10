@@ -5,6 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.ws.config.annotation.EnableWs;
+import org.springframework.ws.config.annotation.WsConfigurerAdapter;
 import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
@@ -12,7 +13,7 @@ import org.springframework.xml.xsd.XsdSchema;
 @Configuration
 @EnableWs
 @ComponentScan("com.consoft.soapws")
-public class WebServiceConfig{
+public class WebServiceConfig extends WsConfigurerAdapter{
 	
 	private static final String NAMESPACE_URI = "http://www.consoft.com/soapws/api";
 	

@@ -2,7 +2,7 @@
 // Questo file è stato generato dall'architettura JavaTM per XML Binding (JAXB) Reference Implementation, v2.3.2 
 // Vedere <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Qualsiasi modifica a questo file andrà persa durante la ricompilazione dello schema di origine. 
-// Generato il: 2020.07.09 alle 03:13:31 PM CEST 
+// Generato il: 2020.07.10 alle 01:17:53 PM CEST 
 //
 
 
@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "customerToDeleteID"
 })
-@XmlRootElement(name = "DeleteCustomerRequest")
+@XmlRootElement(name = "deleteCustomerRequest")
 public class DeleteCustomerRequest {
 
     protected int customerToDeleteID;

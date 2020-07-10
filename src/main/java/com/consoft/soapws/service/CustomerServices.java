@@ -14,7 +14,12 @@ import com.consoft.soapws.api.Customer;
 @Service
 public class CustomerServices {
 
+	private static final String SUCCESS = "success";
+	private static final String FAILURE = "failure";
+	
 	private static final Map<Integer, Customer> customers = new HashMap<>();
+	
+	private static int idCounter = 4;
 		
 		@PostConstruct
 		public void initialize() {
@@ -46,5 +51,15 @@ public class CustomerServices {
 		
 		public List<Customer> getCustomers(){
 			return new LinkedList<Customer>(customers.values());
+		}
+		
+		public String addCustomer(Customer c) {
+			customers.put(idCounter++, c);
+			return SUCCESS;
+		}
+		
+		public String deleteCustomer(int id) {
+			customers.remove(id);
+			return SUCCESS;
 		}
 }
